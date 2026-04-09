@@ -8,6 +8,8 @@ const path = require('node:path');
 const execFileAsync = promisify(execFile);
 const shouldOpenDevTools = process.env.AKOFLOW_OPEN_DEVTOOLS === '1';
 
+console.log('[AkôFlow] main process bootstrap');
+
 function logMain(message, details) {
   if (details !== undefined) {
     console.log(`[AkôFlow] ${message}`, details);
@@ -341,6 +343,7 @@ ipcMain.handle('docker:open-action', async (_event, actionUrl) => {
 });
 
 app.whenReady().then(() => {
+  console.log('[AkôFlow] app.whenReady fired');
   if (process.platform === 'darwin' && app.dock) {
     app.dock.setIcon(path.join(__dirname, '..', 'assets', 'icon_dock.png'));
   }

@@ -13,7 +13,7 @@
   },
   "build": {
     "appId": "io.akoflow.desktop",
-    "productName": "AkôFlow Desktop",
+    "productName": "Akoflow Desktop",
     "directories": {
       "output": "dist"
     },
@@ -24,33 +24,55 @@
       "package.json"
     ],
     "mac": {
+      "executableName": "AkoflowDesktop",
+      "icon": "assets/icon.icns",
+      "identity": null,
+      "hardenedRuntime": false,
+      "extendInfo": {
+        "CFBundleDisplayName": "AkôFlow Desktop"
+      },
       "target": [
-        { "target": "dmg", "arch": ["arm64", "x64"] }
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
       ],
-      "category": "public.app-category.developer-tools",
-      "icon": "assets/icon.icns"
+      "category": "public.app-category.developer-tools"
     },
     "win": {
       "target": [
-        { "target": "nsis", "arch": ["x64"] }
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
       ],
       "icon": "assets/icon.ico"
     },
     "linux": {
       "target": [
-        { "target": "AppImage", "arch": ["x64"] }
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
       ],
       "category": "Development",
       "icon": "assets/icon.png"
     }
   },
   "dependencies": {
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
-    "electron": "^34.0.0",
-    "esbuild": "^0.28.0",
-    "electron-builder": "^25.0.0"
+    "electron": "^41.2.0",
+    "electron-builder": "^26.8.1",
+    "esbuild": "^0.28.0"
   }
 }
