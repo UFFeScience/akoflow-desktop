@@ -26,8 +26,8 @@
     "mac": {
       "executableName": "AkoflowDesktop",
       "icon": "assets/icon.icns",
-      "identity": null,
       "hardenedRuntime": false,
+      "gatekeeperAssess": false,
       "extendInfo": {
         "CFBundleDisplayName": "AkôFlow Desktop"
       },
